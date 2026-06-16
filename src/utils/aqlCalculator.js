@@ -30,31 +30,27 @@ export function calcDecision(defectCounts, sampleSize) {
   return { decision, crit, maj, min, majPct, minPct }
 }
 
-// Defect types relevant to cosmetics finished goods
+// Defect types — Cosmetics Finished Goods AQL Inspection (ESME-QA-SOP-22-F-02)
 export const DEFECT_TYPES = {
   critical: [
-    'Contamination / microbial growth',
-    'Wrong product / mislabelled',
-    'Harmful foreign matter (glass, metal)',
-    'Primary seal breach / leakage',
-    'Wrong fragrance / off-odour',
-    'Incorrect active ingredient concentration',
+    'Print Defect in mandatory text — Site address, Brand Name, Logo, Mfg. Lic. No., Consumer Care details, Net Weight not legible',
+    'Batch Coding / MRP / USP defect on primary pack — Misprint, wrong batch coding, smudged, illegible or double coded / over-printed batch',
+    'Weight outside agreed tolerance limits — Average weight less / more than specified regulatory limits post stamping',
+    'Foreign matter in product, Separation or Sedimentation — Hair, thread, metal contamination (other than black particles), layer separation or particle sedimentation in bulk',
+    'Colour, Shade, Texture and Fragrance not matching with Standard — Short packaging / empty container',
   ],
   major: [
-    'Leaking / broken closure',
-    'Wrong shade or colour (foundation, lipstick, eyeshadow)',
-    'Incorrect net weight / fill volume',
-    'Label missing or major misprint',
-    'Cap / pump not functioning',
-    'Phase separation / texture defect',
-    'Batch number / expiry missing on unit',
+    'Fitment and functioning of component — Cap, seal, brush, pump functioning and tightness',
+    'Locking Defects, Improper cutting and pasting, Wet and dirty cartons',
+    'Scratches, Torn label, Off-centre label and Glue issue — Scratches visible from 1-metre distance, torn label, off-centre label, label not pasted properly',
+    'Open pack, Breakage, Damaged and Loose fitment, Leakage — Open mono-carton, compact powder breakage, damaged / loose fitments in mono-carton or shipper',
+    'Finishing issues, Pin holes, Sweating in lipstick bullets',
+    'Crushed / Wrinkled / Dirty tube or container, Crimping issue, Burning mark in blister — Distorted pack / crushed tube edges visible from 1 mt, burning mark',
   ],
   minor: [
-    'Minor cosmetic dent on tube or bottle',
-    'Slight label offset (< 3 mm)',
-    'Print smudge on carton or shipper',
-    'Minor surface scratch on cap',
-    'Quantity short in shipper (< 2 units)',
-    'Loose shrink wrap',
+    'Poor application of BOPP tape on shipper flaps — Poor alignment of tape and partially open flaps due to loose application',
+    'Coding shifting, Panel shifting — Coding or panel shifting (NMT 2 mm) to be allowed',
+    'Scuffed pack — Distinctly visible scuff marks on container',
+    'Outer Box Flap open without tear — Poor fibre tear on opening of outer flaps',
   ],
 }
