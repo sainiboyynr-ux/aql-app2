@@ -1,0 +1,53 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary:       #7B2D8B;
+  --primary-dark:  #5A1F68;
+  --primary-light: #F3E8F7;
+  --primary-mid:   #C084D0;
+
+  --accent:        #C0395A;
+  --accent-light:  #FDEDF1;
+  --accent-dark:   #8C1F38;
+
+  --teal:          #0F7B6C;
+  --teal-light:    #E0F4F1;
+
+  --gold:          #B8860B;
+  --gold-light:    #FDF6E3;
+
+  --accept-bg:     #E6F4EC;
+  --accept-text:   #1A6B3A;
+  --accept-border: #A8D9B8;
+
+  --hold-bg:       #FEF3E2;
+  --hold-text:     #7A4A00;
+  --hold-border:   #F5C97A;
+
+  --reject-bg:     #FDEDF1;
+  --reject-text:   #8C1F38;
+  --reject-border: #F4A7BC;
+
+  --bg:            #FAF7FC;
+  --surface:       #FFFFFF;
+  --border:        #EDE4F0;
+  --text-primary:  #1E0A2E;
+  --text-secondary:#6B5878;
+  --text-muted:    #A494B0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+input, textarea, button, select { font-family: inherit; }
+
+input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: pointer; }
+
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: var(--primary-mid); border-radius: 4px; opacity: 0.3; }
